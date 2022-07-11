@@ -12,22 +12,28 @@ This is a terminal prompt design on windows 10 and above...
 3. install oh-my-posh
 
 ***Installing using powershell:***
-> ## Manual Installation:
-``` 
-Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
-```
+
 > ## Installation using winget:
 ```
 winget install JanDeDobbeleer.OhMyPosh -s winget
+Install-Module -Name oh-my-posh
+Import-Module -Name oh-my-posh
 ```
- ## To Use:
-1. A powershell folder will be created in your documents dir, copy and paste the contents of the folder  ` config_files_ohmyposh`
-2. After installing oh-my-posh, copy the contents in the folder `ohmyposh_themes` and paste it in this path `C:\Users\PC_NAME\AppData\Local\oh-my-posh`
-3. run this command to configure/start [Ohmyposh](https://ohmyposh.dev/docs/installation/windows):
+ ## To activate [oh-my-posh](https://ohmyposh.dev/docs/installation/windows):
 ```
-oh-my-posh prompt init --config C:\Users\PC_NAME\AppData\Local\oh-my-posh\config.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression
 ```
-4. goto [Nerdfonts](https://www.nerdfonts.com/font-downloads) then download this font `FantasqueSanaMono Nerd Font` which has glyphs to help your terminal look like this:
+## Next:
+After installing oh-my-posh successfully, Type `notepad $PROFLIE` in powershell to create a config file in `Documents`
+
+Now: 
+Goto Documents and open the `PowerShell` folder and copy the contents of `config_files_ohmyposh` , paste it in there and click on replace all to continue.
+## To Navigate to the path at which the themes are:
+Type: `$env:POSH_THEMES_PATH` this will print a path like this
+`C:\Users\PC_NAME\AppData\Local\Programs\oh-my-posh\themes`
+
+
+Goto [Nerdfonts](https://www.nerdfonts.com/font-downloads) then download this font `FantasqueSanaMono Nerd Font` which has glyphs to help your terminal look like this:
 ![](./powershell_prompt.PNG)
 5. after downloading the `Nerd Font` :
 ```
@@ -46,17 +52,11 @@ Extract the Nerd Fonts, copy the fonts and paste them in the fonts window to ins
 ```
 Install-Module -Name Terminal-Icons -Repository PSGallery
 ```
-Usage (Terminal icons):
+## Usage (Terminal icons):
 ```
 Import-Module -Name Terminal-Icons
 ```
-9. Run this command to install [posh git](https://computingforgeeks.com/posh-git-powershell-environment-for-git/):
-```
-PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
-
-Install-Module PowershellGet -Force
-```
-To change an ohmyposh theme:
+## To change an ohmyposh theme:
 
 change/replace the file `config.omp.json` in 
 ```
