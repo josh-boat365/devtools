@@ -27,7 +27,22 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 oh-my-posh prompt init --config C:\Users\PC_NAME\AppData\Local\oh-my-posh\config.omp.json | Invoke-Expression
 ```
-4. Run this command to install [Terminal icons](https://github.com/devblackops/Terminal-Icons):
+4. goto [Nerdfonts](https://www.nerdfonts.com/font-downloads) then download this font `FantasqueSanaMono Nerd Font` which has glyphs to help your terminal look like this:
+![](./powershell_prompt.PNG)
+5. after downloading the `Nerd Font` :
+```
+Press the Windows Button + R on the keyboard
+Type:
+C:\Windows\Fonts
+Hit Enter on the keyboard
+Extract the Nerd Fonts, copy the fonts and paste them in the fonts window to install the fonts.
+```
+6. click on the arrow point down then select setting from the dropdown:
+
+![](./1.PNG)
+
+7. after clicking on setting, navigate to `Appearance` in the `Windows Terminal ` downloaded from `Microsoft store` , then choose `font face` and select `FantasqueSanaMono NF`
+8. Run this command to install [Terminal icons](https://github.com/devblackops/Terminal-Icons):
 ```
 Install-Module -Name Terminal-Icons -Repository PSGallery
 ```
@@ -35,7 +50,7 @@ Usage (Terminal icons):
 ```
 Import-Module -Name Terminal-Icons
 ```
-5. Run this command to install [posh git](https://computingforgeeks.com/posh-git-powershell-environment-for-git/):
+9. Run this command to install [posh git](https://computingforgeeks.com/posh-git-powershell-environment-for-git/):
 ```
 PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 
