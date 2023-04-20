@@ -60,6 +60,6 @@ Import-Module -Name Terminal-Icons
 
 change/replace the file `config.omp.json` in 
 ```
-oh-my-posh prompt init --config C:\Users\PC_NAME\AppData\Local\oh-my-posh\config.omp.json | Invoke-Expression
+oh-my-posh prompt init --config C:\Users\PC_NAME\AppData\Local\Programs\oh-my-posh\themes\1_shell.omp.json | Invoke-Expression
 ```
 with your choice of themes in the folder ` C:\Users\PC_NAME\AppData\Local\oh-my-posh\config.omp.json` 
