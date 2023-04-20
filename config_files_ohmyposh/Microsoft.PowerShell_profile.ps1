@@ -11,12 +11,10 @@ Import-Module -Name Terminal-Icons
 #Import-Module oh-my-posh
 set-alias desktop "Desktop.ps1"
 #Set-Theme ParadoxGlucose
-#Set-PoshPrompt -theme "C:\Users\_kay_\AppData\Local\oh-my-posh\blue-owl.json"
+#Set-PoshPrompt -theme "C:\Users\PC_NAME\AppData\Local\oh-my-posh\blue-owl.json"
 
-oh-my-posh --init --shell pwsh --config "C:\Users\_kay_\AppData\Local\oh-my-posh\blue-owl.json" | Invoke-Expression
-# C:\Users\_kay_\AppData\Local\oh-my-posh\jandedobblerlee.omp.json
+oh-my-posh --init --shell pwsh --config "C:\Users\PC_NAME\AppData\Local\Programs\oh-my-posh\themes\1_shell.omp.json" | Invoke-Expression
 
-#(@(&"C:/Users/_kay_/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe" init pwsh --config="C:\Users\_kay_\AppData\Local\oh-my-posh\blue-owl.json" --print) -join "`n") | Invoke-Expression
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
